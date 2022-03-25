@@ -102,8 +102,6 @@ app.patch('/todos/:id/done', checksExistsUserAccount, (request, response) => {
 
     todo.done = true;
 
-    user.todos[todoIndex] = todo;
-
     return response.status(200).json(todo);
   }
 
